@@ -1,0 +1,29 @@
+{
+    "name": "arabcoders/profiler",
+    "type": "library",
+    "description": "Profiler Library Abstraction",
+    "keywords": [
+        "profiler",
+        "xhprof",
+        "uprofiler",
+        "tideways"
+    ],
+    "homepage": "https://www.abdulmohsen.me",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AbdulMohsen B. A. A.",
+            "email": "admin@arabcoders.org",
+            "url": "https://www.abdulmohsen.me"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "arabcoders\\profiler\\": "src/"
+        }
+    }
+}
+
