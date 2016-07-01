@@ -145,21 +145,21 @@ class Profiler implements ProfilerInterface
         return $this->handler->save( $this->getData(), $options );
     }
 
-    public function setNormalizeUrls( array $list = [ ] ): ProviderInterface
+    public function setNormalizeUrls( array $list = [ ] ): ProfilerInterface
     {
         $this->list = $list;
 
         return $this;
     }
 
-    public function setIgnoreVariables( array $vars = [ ] ): ProviderInterface
+    public function setIgnoreVariables( array $vars = [ ] ): ProfilerInterface
     {
         $this->ignoreVariables = $vars;
 
         return $this;
     }
 
-    public function setIgnoreFunctions( array $functions = [ ] ): ProviderInterface
+    public function setIgnoreFunctions( array $functions = [ ] ): ProfilerInterface
     {
         $this->ignoreFunctions = $functions;
 

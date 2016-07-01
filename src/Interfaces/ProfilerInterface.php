@@ -49,7 +49,7 @@ interface ProfilerInterface extends ProviderInterface
      *
      * @return ProviderInterface
      */
-    public function setNormalizeUrls( array $list = [ ] ): ProviderInterface;
+    public function setNormalizeUrls( array $list = [ ] ): ProfilerInterface;
 
     /**
      * Ignore Functions/classes.
@@ -58,7 +58,7 @@ interface ProfilerInterface extends ProviderInterface
      *
      * @return ProviderInterface
      */
-    public function setIgnoreFunctions( array $functions = [ ] ): ProviderInterface;
+    public function setIgnoreFunctions( array $functions = [ ] ): ProfilerInterface;
 
     /**
      * Ignore Variables from Url.
@@ -67,5 +67,5 @@ interface ProfilerInterface extends ProviderInterface
      *
      * @return ProviderInterface
      */
-    public function setIgnoreVariables( array $vars = [ ] ): ProviderInterface;
+    public function setIgnoreVariables( array $vars = [ ] ): ProfilerInterface;
 }
