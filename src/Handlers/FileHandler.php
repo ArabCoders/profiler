@@ -92,7 +92,7 @@ class FileHandler implements HandlerInterface
      *
      * @return string
      */
-    protected function getName(): string
+    public function getName(): string
     {
         if ( empty( $this->name ) )
         {
