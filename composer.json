@@ -22,6 +22,11 @@
     "require-dev": {
         "phpunit/phpunit": "^5.5"
     },
+    "suggest": {
+        "ext-uprofiler": "dev-master",
+        "ext-tideways": "dev-master",
+        "ext-xhprof": "dev-master"
+    },
     "autoload": {
         "psr-4": {
             "arabcoders\\profiler\\": "src/"
