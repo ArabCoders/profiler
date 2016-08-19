@@ -152,11 +152,21 @@ class Profiler implements ProfilerInterface
         return $this;
     }
 
+    public function getNormalizeUrls(): array
+    {
+        return $this->list;
+    }
+
     public function setIgnoreVariables( array $vars = [ ] ): ProfilerInterface
     {
         $this->ignoreVariables = $vars;
 
         return $this;
+    }
+
+    public function getIgnoreVariables(): array
+    {
+        return $this->ignoreVariables;
     }
 
     public function setIgnoreFunctions( array $functions = [ ] ): ProfilerInterface
@@ -166,6 +176,11 @@ class Profiler implements ProfilerInterface
         return $this;
     }
 
+    public function getIgnoreFunctions(): array
+    {
+        return $this->ignoreFunctions;
+    }
+
     /**
      * Simplify urls.
      *
@@ -173,7 +188,7 @@ class Profiler implements ProfilerInterface
      *
      * @return string
      */
-    protected function simplifyUrl( $url ): string
+    public function simplifyUrl( string $url ): string
     {
         foreach ( $this->list as $regex => $normalizedUrl )
         {

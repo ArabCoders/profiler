@@ -47,25 +47,55 @@ interface ProfilerInterface extends ProviderInterface
      *
      * @param array $list regex => string|callable,
      *
-     * @return ProviderInterface
+     * @return ProfilerInterface
      */
     public function setNormalizeUrls( array $list = [ ] ): ProfilerInterface;
+
+    /**
+     * Get Normalize Urls.
+     *
+     * @return array
+     */
+    public function getNormalizeUrls(): array;
 
     /**
      * Ignore Functions/classes.
      *
      * @param array $functions
      *
-     * @return ProviderInterface
+     * @return ProfilerInterface
      */
     public function setIgnoreFunctions( array $functions = [ ] ): ProfilerInterface;
+
+    /**
+     * Get Ingore Functions/classes.
+     *
+     * @return array
+     */
+    public function getIgnoreFunctions():array;
 
     /**
      * Ignore Variables from Url.
      *
      * @param array $vars
      *
-     * @return ProviderInterface
+     * @return ProfilerInterface
      */
     public function setIgnoreVariables( array $vars = [ ] ): ProfilerInterface;
+
+    /**
+     * Get Ignore Variables.
+     *
+     * @return array
+     */
+    public function getIgnoreVariables(): array;
+
+    /**
+     * Return simplified url if possible.
+     *
+     * @param $url
+     *
+     * @return string
+     */
+    public function simplifyUrl( string $url ): string;
 }
